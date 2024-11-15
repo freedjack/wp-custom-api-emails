@@ -27,6 +27,9 @@ class CustomAPIEmails {
         add_filter('bdpwr_code_email_text', array($this, 'customResetContent'), 10, 4);
         add_action('wp_mail_from', array($this, 'customEmailFrom'));
         add_action('wp_mail_from_name', array($this, 'customEmailFromName'));
+        add_filter( 'bdpwr_selection_string' , function( $string ) {
+            return '0123456789';
+        }, 10, 4);
     }
 
     public function addAdminMenu() {

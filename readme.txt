@@ -17,6 +17,8 @@ Custom API Emails Manager allows WordPress administrators to customize the email
 - Custom "From" name and email address support
 
 ## Installation
+Requires the following plugins:
+- REST API Password Reset with Code https://en-gb.wordpress.org/plugins/bdvs-password-reset/
 
 1. Download the plugin files
 2. Upload the plugin folder to the `/wp-content/plugins/` directory
