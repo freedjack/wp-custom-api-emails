@@ -236,7 +236,7 @@ class Custom_API_Emails {
      * @param string $email User email.
      * @return string
      */
-    public function custom_reset_content( $content, $code, $expiry, $email ) {
+    public function custom_reset_content( $content, $email, $code, $expiry ) {
         if ( empty( $this->options['reset_email_content'] ) ) {
             return $content;
         }
@@ -245,7 +245,7 @@ class Custom_API_Emails {
         $replacements = array(
             '{code}'      => $code,
             '{expiry}'    => $expiry,
-            '{email}'     => $email,
+            '{user_email}'=> $email,
             '{site_name}' => get_bloginfo( 'name' ),
         );
 
